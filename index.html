@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Aagaman — Engineering / Software / Systems</title>
+<meta name="description" content="Aagaman — engineering student building software, exploring AI, and thinking in systems.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Cursor glow — desktop only, disabled under prefers-reduced-motion (see script.js) -->
+  <div class="cursor-glow" id="cursorGlow" aria-hidden="true"></div>
+
+  <!-- ============================================
+       NAV
+       ============================================ -->
+  <nav class="nav" id="nav">
+    <div class="wrap nav-inner">
+      <a href="#top" class="nav-logo">AAGAMAN</a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#work">Work</a></li>
+        <li><a href="#lab">Lab</a></li>
+        <li><a href="#about">About</a></li>
+      </ul>
+      <div class="nav-status">● BUILDING</div>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ============================================
+       01 — HERO
+       ============================================ -->
+  <section class="hero" id="top">
+    <div class="grid-bg" aria-hidden="true"></div>
+    <div class="wrap hero-grid">
+      <div>
+        <div class="eyebrow hero-label">ENGINEERING / SOFTWARE / AI</div>
+        <h1 class="hero-headline">
+          <span>I BUILD.</span>
+          <span class="outline">I EXPERIMENT.</span>
+          <span>I UNDERSTAND SYSTEMS.</span>
+        </h1>
+        <p class="hero-sub">I'm Aagaman. I'm an engineering student from Nepal, and I'm obsessed with understanding how things actually work.</p>
+        <div class="hero-ctas">
+          <a href="#work" class="btn-primary magnetic">EXPLORE WORK <span class="arrow">↗</span></a>
+          <a href="#about" class="btn-ghost">ABOUT ME</a>
+        </div>
+      </div>
+
+      <div class="status-panel reveal">
+        <div class="status-panel-title mono">SYSTEM STATUS</div>
+        <div class="status-row"><span>BUILD</span><b class="ok">✓</b></div>
+        <div class="status-row"><span>LEARN</span><b class="ok">✓</b></div>
+        <div class="status-row"><span>EXPERIMENT</span><b class="ok">✓</b></div>
+        <div class="status-focus">
+          <div class="status-focus-label">CURRENT FOCUS</div>
+          <div class="status-focus-value">AI / SOFTWARE</div>
+        </div>
+        <div class="status-panel-footer">
+          <span>SYSTEM_01</span>
+          <span>2026</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       02 — SELECTED WORK
+       ============================================ -->
+  <section id="work">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <h2 class="heading-split">
+          <span class="outline">Selected</span>
+          <span class="outline">Systems</span>
+        </h2>
+      </div>
+
+      <div class="project-list" id="projectList"></div>
+    </div>
+  </section>
+
+  <!-- Project detail modal — populated from projectsData on click -->
+  <div class="modal-overlay" id="modalOverlay" role="dialog" aria-modal="true" aria-labelledby="modalTag">
+    <div class="modal-panel" id="modalPanel">
+      <div class="modal-image" id="modalImage"></div>
+      <div class="modal-head">
+        <div>
+          <div class="modal-num mono" id="modalNum"></div>
+          <div class="modal-tag" id="modalTag"></div>
+        </div>
+        <button class="modal-close" id="modalClose" aria-label="Close">✕</button>
+      </div>
+      <div class="modal-desc" id="modalDesc"></div>
+      <div class="modal-detail" id="modalDetail"></div>
+      <div id="modalTerminal"></div>
+      <div class="modal-stack" id="modalStack"></div>
+      <div class="modal-footer">
+        <span class="modal-status" id="modalStatus"></span>
+        <a class="modal-link" id="modalLink" href="#" target="_blank" rel="noopener" style="display:none;">VIEW REPO ↗</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================================
+       03 — HOW I THINK
+       ============================================ -->
+  <section id="thinking">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <h2 class="section-title">How I Think</h2>
+      </div>
+      <p class="think-intro reveal">I tend to step back before I start building.</p>
+
+      <div class="principles reveal" id="principles"></div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       04 — JOURNEY / TRADING
+       ============================================ -->
+  <section id="journey">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <h2 class="section-title">Journey — Trading</h2>
+      </div>
+
+      <div class="journey-layout">
+        <div>
+          <p class="journey-desc reveal">A long-term exploration of markets, probability, risk, and decision-making.</p>
+
+        
+          <div class="timeline reveal" id="timeline"></div>
+
+          <div class="taught-grid" id="taughtGrid"></div>
+        </div>
+
+        <div class="loop-visual reveal" aria-label="Decision, risk, outcome, feedback loop">
+          <div class="loop-step"><span class="dot"></span><b>DECISION</b></div>
+          <div class="loop-step"><span class="dot"></span><b>RISK</b></div>
+          <div class="loop-step"><span class="dot"></span><b>OUTCOME</b></div>
+          <div class="loop-step"><span class="dot"></span><b>FEEDBACK</b></div>
+          <div class="loop-cycle">↺ repeats</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       05 — LAB
+       ============================================ -->
+  <section id="lab">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <h2 class="section-title">Lab</h2>
+      </div>
+      <div class="lab-body reveal">
+        <div>Small experiments.</div>
+        <div>Unfinished ideas.</div>
+        <div>Things I'm learning.</div>
+        <div>Things I'm trying to understand.</div>
+      </div>
+      <!-- lab-entries populates automatically from labData; empty by design until real entries exist -->
+      <div class="lab-entries reveal" id="labEntries"></div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       06 — ABOUT
+       ============================================ -->
+  <section id="about">
+    <div class="wrap about-layout">
+      <div>
+        <div class="section-head reveal" style="margin-bottom:32px;">
+          <h2 class="section-title">About</h2>
+        </div>
+        <div class="about-copy reveal">
+          <p>I'm Aagaman. I'm an engineering student from Nepal, and I'm obsessed with understanding how things actually work.</p>
+          <p>I don't like stopping at the surface. If something interests me, I want to take it apart, understand the pieces, see how they interact, and eventually build something myself. That's what pulled me toward software, AI, and systems.
+             I also spent a lot of time exploring trading. It became another way for me to study systems — probability, risk, feedback, and decision-making under uncertainty.
+             I'm still early. Most of what I'm building is unfinished, and a lot of what I'm learning will probably change the way I think again.
+             That's fine.
+             I'm here to build, understand, and improve.
+</p>
+        </div>
+        <div class="about-statements reveal">
+          <div class="about-statement">Currently learning.</div>
+          <div class="about-statement">Currently building.</div>
+          <div class="about-statement">Always investigating.</div>
+        </div>
+      </div>
+
+      <div class="progression reveal" aria-label="Engineering, software, AI, systems, open future">
+        <div class="prog-step">ENGINEERING</div>
+        <div class="prog-arrow">↓</div>
+        <div class="prog-step">SOFTWARE</div>
+        <div class="prog-arrow">↓</div>
+        <div class="prog-step">AI</div>
+        <div class="prog-arrow">↓</div>
+        <div class="prog-step is-current">SYSTEMS</div>
+        <div class="prog-arrow">↓</div>
+        <div class="prog-step is-open">???</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       07 — CONTACT
+       ============================================ -->
+  <section id="contact">
+    <div class="wrap contact-inner">
+      <h2 class="contact-title reveal">Let's build something.</h2>
+      <p class="contact-sub reveal">Have an interesting idea, project, or problem worth exploring?</p>
+      
+      <div class="contact-links reveal">
+        <a class="contact-link" href="mailto:aagamanbhandari79.com">EMAIL ↗</a>
+        <a class="contact-link" href="https://github.com/agmn69" target="_blank" rel="noopener">GITHUB ↗</a>
+        <a class="contact-link" href="https://linkedin.com/in/aagaman" target="_blank" rel="noopener">LINKEDIN ↗</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="wrap footer-inner">
+      <span>AAGAMAN — ENGINEERING · SOFTWARE · SYSTEMS</span>
+      <span>© 2026 Aagaman — Built with 3C's.</span>
+      <span class="footer-status">SYSTEM STATUS: ONLINE</span>
+    </div>
+  </footer>
+
+<script src="script.js" defer></script>
+</body>
+</html>
